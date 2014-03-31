@@ -3,7 +3,9 @@
  * 国家行政区划分数据最新数据
  * @author basecss <i@basecss.net>
  */
-var cityData = [
+var global, cityData;
+	
+cityData = [
 	{
 		name: '北京市',
 		sub: [
@@ -4752,3 +4754,22 @@ var cityData = [
 		]
 	}
 ];
+
+if (typeof module !== 'undefined' && module.exports) {
+
+	module.exports = cityData;
+
+} else if (typeof define === 'function' && define.amd) {
+
+	define(function(){
+		return cityData;
+	});
+
+} else {
+
+	global = (function(){
+		return this || (0,eval)('this');
+	}());
+	global.cityData = cityData;
+
+}

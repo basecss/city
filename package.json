@@ -1,0 +1,25 @@
+{
+	"name": "citydata",
+	"description": "最新国家行政区划及主要城市数据生成",
+	"version": "0.0.1",
+	"author": "basecss <i@basecss.net>",
+	"contributors": [],
+	"dependencies": {
+		"commander": "~2.2.0"
+	},
+	"devDependencies": {},
+	"main": "city.js",
+	"bin": {
+		"city": "city.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git//github.com/basecss/cityData.git"
+	},
+	"keywords": ["citydata","城市数据","国家行政区划数据"],
+	"scripts": { },
+	"engines": {
+		"node": ">= 0.8.0"
+	},
+	"license": "MIT"
+}
