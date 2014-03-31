@@ -4,7 +4,7 @@ var commander = require('commander'),
 commander
 	.version('0.0.1')
 	.option('-p --province', '输出一级行政区数据')
-	.option('-l --level', '输出地级行政区数据')
+	.option('-l --level', '输出指定级别行政区数据')
 	.parse(process.argv);
 
 generate();
@@ -39,7 +39,7 @@ function generate() {
 			ret.push(temp);
 
 		});
-		
+
 	} else {
 
 		cityData.forEach(function(item) {
