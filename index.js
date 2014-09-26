@@ -7,13 +7,18 @@ var generator = require('./lib/generator.js');
 commander
 	.version(version)
 	.option('-l --level <n>','输出指定级别行政区数据',parseInt)
+	.option('-o --output [value]','输出文件')
+	.option('-j --js [value]','以指定全局对象输出js文件')
+	.option('-a --amd','以AMD规范输出js文件')
+	.option('-m --cmd','以CMD规范输出js文件')
+	.option('-p --pretty','格式化输出')
 	.option('-s --overseas','包含海外地区')
+	.option('-c --code','包含地区编码（身份证前6位）')
+	.option('-u --update','重新抓取原始数据')
 	// .option('-t --type','输出类型，array/object')
 	// .option('-k --key','对象键名，name/zipcode/')
 	// .option('-f --flatten','扁平化输出')
 	// .option('-z --zipcode','包含邮编')
-	.option('-c --code','包含地区编码（身份证前6位）')
-	.option('-u --update','重新抓取原始数据')
 	.parse(process.argv);
 
 
@@ -23,7 +28,12 @@ if(commander.update){
 	var options = {
 		level:commander.level,
 		code:commander.code,
-		overseas:commander.overseas
+		overseas:commander.overseas,
+		output:commander.output,
+		js:commander.js,
+		amd:commander.amd,
+		cmd:commander.cmd,
+		pretty:commander.pretty
 	};
 	generator.generate(options);
 }
