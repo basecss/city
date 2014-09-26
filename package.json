@@ -1,25 +1,39 @@
 {
-	"name": "citydata",
-	"description": "最新国家行政区划及主要城市数据生成",
-	"version": "0.0.1",
-	"author": "basecss <i@basecss.net>",
-	"contributors": [],
-	"dependencies": {
-		"commander": "~2.2.0"
-	},
-	"devDependencies": {},
-	"main": "city.js",
-	"bin": {
-		"city": "city.js"
-	},
-	"repository": {
-		"type": "git",
-		"url": "git//github.com/basecss/cityData.git"
-	},
-	"keywords": ["citydata","城市数据","国家行政区划数据"],
-	"scripts": { },
-	"engines": {
-		"node": ">= 0.8.0"
-	},
-	"license": "MIT"
+  "name": "city",
+  "description": "中国国家行政区划数据",
+  "version": "0.1.0",
+  "author": "basecss <i@basecss.net>",
+  "contributors": [
+    {
+      "name": "TooBug",
+      "email": "i@toobug.net",
+      "url": "http://www.toobug.net/"
+    }
+  ],
+  "dependencies": {
+    "cheerio": "^0.17.0",
+    "commander": "~2.2.0",
+    "restler": "^3.2.2"
+  },
+  "devDependencies": {},
+  "main": "index.js",
+  "bin": {
+    "city": "index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TooBug/city.git"
+  },
+  "keywords": [
+    "city",
+    "城市数据",
+    "国家行政区划数据"
+  ],
+  "scripts": {
+    "test": "echo no test"
+  },
+  "engines": {
+    "node": ">= 0.8.0"
+  },
+  "license": "MIT"
 }
