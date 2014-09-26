@@ -7,7 +7,7 @@ var generator = require('./lib/generator.js');
 commander
 	.version(version)
 	.option('-l --level <n>','输出指定级别行政区数据',parseInt)
-	// .option('-s --overseas','包含海外地区')
+	.option('-s --overseas','包含海外地区')
 	// .option('-t --type','输出类型，array/object')
 	// .option('-k --key','对象键名，name/zipcode/')
 	// .option('-f --flatten','扁平化输出')
@@ -22,7 +22,8 @@ if(commander.update){
 }else{
 	var options = {
 		level:commander.level,
-		code:commander.code
+		code:commander.code,
+		overseas:commander.overseas
 	};
 	generator.generate(options);
 }
