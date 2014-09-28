@@ -1,7 +1,7 @@
 {
   "name": "city",
   "description": "中国国家行政区划数据",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "basecss <i@basecss.net>",
   "contributors": [
     {
