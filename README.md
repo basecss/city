@@ -60,5 +60,5 @@ city
 
 ### Todo
 
-[ ] 海外地区支持按拼音排序<https://github.com/TooBug/city/issues/1>
-[ ] 支持更多格式的输出<https://github.com/TooBug/city/issues/2>
+- [ ] 海外地区支持按拼音排序<https://github.com/TooBug/city/issues/1>
+- [ ] 支持更多格式的输出<https://github.com/TooBug/city/issues/2>
