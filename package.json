@@ -13,6 +13,7 @@
   "dependencies": {
     "cheerio": "^0.17.0",
     "commander": "~2.2.0",
+    "pinyin": "^2.6.2",
     "restler": "^3.2.2"
   },
   "devDependencies": {},

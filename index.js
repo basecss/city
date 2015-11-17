@@ -12,9 +12,11 @@ commander
 	.option('-m --cmd','以CMD规范输出js文件')
 	.option('-p --pretty','格式化输出')
 	.option('-s --overseas','包含海外地区')
+	.option('-y --pinyin','输出pinyin')
+	.option('-i --ignore [value]','忽略 \'省|市|区|地区|县\'')
 	.option('-c --code','包含地区编码（身份证前6位）')
 	.option('-u --update','重新抓取原始数据')
-	.option('-k --key [value]','对象键名 name,children,code')
+	.option('-k --key [value]','对象键名 name,children,code,pinyin')
 	// .option('-t --type','输出类型，array/object')
 	// .option('-f --flatten','扁平化输出')
 	// .option('-z --zipcode','包含邮编')
@@ -33,7 +35,9 @@ if(commander.update){
 		amd:commander.amd,
 		cmd:commander.cmd,
 		pretty:commander.pretty,
-		keys:commander.key
+		keys:commander.key,
+		pinyin:commander.pinyin,
+		ignore:commander.ignore
 	};
 	require('./lib/generator.js').generate(options);
 }
