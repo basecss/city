@@ -61,6 +61,10 @@ city
 - `-u` `--update` 重新抓取原始数据
 - `-y` `--pinyin` 输出pinyin
 - `-i` `--ignore '省|市|区|地区|县'` 忽略 省|市|区|地区|县
+- `-k` `--key name,children,code,pinyin` 导出的键名（顺序不能改变，例如n,s,c,p）
+- `-f` `--flat 'parentId'` 扁平化输出，可以指定parentId参数名称
+- `-s` `--closed'` 地区树结点默认为关闭状态
+- `-t` `--father'` 转出指定父节点的所有子节点，不含父节点
 
 ### Todo
 
