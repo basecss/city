@@ -20,6 +20,7 @@ commander
 	.option('-f --flat [value]','扁平化输出，可以指定parentId参数名称')
     .option('--closed','地区树默认为关闭状态')
     .option('--father [value]','转出指定父节点的所有子节点，不含父节点')
+	.option('-r --reverse','转出以子节点为根的树，便于倒查父节点')
     // .option('-t --type','输出类型，array/object')
 	// .option('-z --zipcode','包含邮编')
 	.parse(process.argv);
@@ -42,7 +43,8 @@ if(commander.update){
 		ignore:commander.ignore,
         flat:commander.flat,
         closed:commander.closed,
-        father:commander.father
+        father:commander.father,
+		reverse:commander.reverse
 	};
 	require('./lib/generator.js').generate(options);
 }
