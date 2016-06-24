@@ -61,6 +61,27 @@ city
 - `-u` `--update` 重新抓取原始数据
 - `-y` `--pinyin` 输出pinyin
 - `-i` `--ignore '省|市|区|地区|县'` 忽略 省|市|区|地区|县
+- `-k` `--key name,children,code,pinyin` 导出的键名（顺序不能改变，例如n,s,c,p）
+- `-f` `--flat 'parentId'` 扁平化输出，可以指定parentId参数名称
+-      `--closed` 地区树结点默认为关闭状态
+-      `--father` 转出指定父节点的所有子节点，不含父节点
+- `-r` `--reserve` 转出以子节点为根的树，便于倒查父节点
+
+示例：
+1. 嵌套方式列出所有地区，name改为n，children改为s，code改为c，并带上地区编码
+```sh
+city -k n,s,c -o ./area.json -c
+```
+
+2. 平面方式列出所有地区，name改为n，children改为s，code改为c，parentId为p，并带上地区编码
+```sh
+city -k n,s,c -o ./flat-area.json -c -f p
+```
+
+3. 倒树方式列出所有地区，子地区的code为key，val为父地区的{code:code, name:name};
+```sh
+city -k n,s,c -o ./reverse-area.js -j reverse_area -r
+```
 
 ### Todo
 
