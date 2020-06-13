@@ -14,8 +14,8 @@ city
 },{
     "name":"天津市",
     "children":[{
-        "name":"和平区"    
-    }]    
+        "name":"和平区"
+    }]
 }]
 ```
 
@@ -87,3 +87,10 @@ city -k n,s,c -o ./reverse-area.js -j reverse_area -r
 
 - [ ] 海外地区支持按拼音排序<https://github.com/TooBug/city/issues/1>
 - [ ] 支持更多格式的输出<https://github.com/TooBug/city/issues/2>
+
+### Changelog
+
+2020.06.12
+
+- 更新内置 `citydata.json` 数据
+- 移除 `市辖区` 数据项
